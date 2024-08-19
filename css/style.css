@@ -1,50 +1,86 @@
+.background {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  position: absolute;
+  height: 100vh;
+}
+
 .background-picture {
   width: 100%;
+  background: url("Assets/back") no-repeat center center;
+  background-size: cover;
   position: absolute;
-  object-fit: cover;
-  gap: 0px;
-  opacity: 0px;
+  height: 100vh;
 }
+.header-wraper {
+  position: sticky;
+}
+
 .navigation-bar {
   padding-top: 3.89%;
   padding-left: 6.1%;
   padding-right: 7.64%;
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: sticky;
 }
 .menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 10.39%;
-  padding-right: 19.32%;
+  max-width: 914px;
+  width: 914px;
+  max-height: 55px;
+  gap: 24px;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
 }
+
 .menu-items {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   margin-left: 10.39%;
-  width: 65px;
-  height: 23px;
+  max-width: 65px;
+  width: 100%;
+  max-height: 23px;
   font-family: Work Sans;
   font-size: 18px;
   font-weight: 600;
   line-height: 23.4px;
   text-align: center;
+  background-color: blueviolet;
 }
 .menu-items:hover {
   color: rgb(252, 177, 31);
   font-size: 21px;
   transition: 0.3s ease-in-out;
 }
-
 .additional-icons {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+.fa-user {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+.fa-cart-shopping {
+  color: white;
+  font-size: 24px;
+  padding-right: 15px;
+}
+.fa-user:hover,
+.fa-cart-shopping:hover {
+  color: rgb(252, 177, 31);
+  transition: 0.3s ease-in-out;
+  font-size: 30px;
 }
 
 .on-photo-text {
@@ -58,8 +94,8 @@
 }
 .on-photo-text-dscrptn {
   color: white;
-  width: 579px;
-  height: 201px;
+  max-width: 579px;
+  max-height: 201px;
   font-family: Work Sans;
   font-size: 56px;
   font-weight: 700;
@@ -73,18 +109,24 @@
   transition-duration: 0.3s;
 }
 .red-on-top-pic {
-  position: relative;
   display: flex;
   justify-content: center;
+  width: 100%;
   align-items: center;
   flex-direction: column;
   margin-top: 50px;
 }
 .red-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
 }
 .red-pic-text {
   position: absolute;
-  top: 60px;
   width: 616px;
   height: 131px;
   display: flex;
@@ -94,28 +136,28 @@
   align-items: center;
 }
 .button {
-  position: absolute;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 125px;
   height: 34px;
   border-radius: 32px;
   border: none;
   color: white;
   background-color: rgba(255, 117, 58, 1);
-  top: 207px;
-  left: 50%;
-  transform: translateX(-50%);
-  gap: 10px;
   font-family: Work Sans;
   font-size: 14px;
   font-weight: 600;
   line-height: 18.2px;
   text-align: center;
   transform-origin: center;
+  margin-top: 25px;
 }
 .button:hover {
   color: black;
   background-color: white;
-  font-size: 18px;
+  font-size: 16px;
   /* gassworee essss */
   transform: scale(1.2);
   transition: ease-in-out 0.3s;
@@ -153,7 +195,7 @@
   text-align: center;
   color: rgba(80, 80, 80, 1);
   border-top: 3px solid rgba(171, 4, 51, 1);
-  margin-bottom: 34px;
+
   margin-top: 34px;
   transition: 0.3s ease-in-out;
 }
@@ -161,6 +203,22 @@
   color: black;
   font-size: 45px;
   border-top: 3px solid rgb(23, 4, 171);
+}
+.secondary-title-store {
+  color: rgba(37, 37, 37, 1);
+  font-family: Work Sans;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: center;
+  margin-bottom: 34px;
+  padding: none;
+  opacity: 0.5;
+}
+.secondary-title-store:hover {
+  opacity: 1;
+  transition: 0.3s ease-in;
+  font-size: 18px;
 }
 
 .guitars {
@@ -198,6 +256,10 @@
   height: 417px;
   gap: 0px;
   opacity: 0px;
+  transition: 0.3s ease-out;
+}
+.guitar-card:hover {
+  transform: scale(105%, 105%);
 }
 
 /* texts */
@@ -211,6 +273,12 @@
   gap: 6px;
   border-radius: 0px 0px 10px 10px;
   opacity: 0px;
+  transition: 0.2s ease;
+}
+.product-description:hover {
+  background-color: rgba(37, 37, 37, 1);
+  color: whitesmoke;
+  transition: 0.3s ease;
 }
 .price-name {
   display: flex;
@@ -283,6 +351,9 @@
   opacity: 0px;
   background-color: rgba(236, 236, 236, 1);
 }
+#Accesories_id::after {
+  background-color: aqua;
+}
 .Accesories {
   display: flex;
   justify-content: center;
@@ -296,6 +367,11 @@
   opacity: 0px;
   filter: drop-shadow(0px 2px 4px rgba(28, 5, 77, 0.1))
     drop-shadow(0px 12px 32px rgba(0, 0, 0, 0.05));
+  transition: 0.2s ease-in-out;
+}
+
+.Accesories-card:hover {
+  transform: scale(105%, 105%);
 }
 .picture-accesories {
   display: flex;
@@ -471,11 +547,20 @@
   font-weight: 700;
   line-height: 18.2px;
 }
-
+.second-block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-top: 48px;
+}
 /* footer */
 .footer {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-left: 6.91%;
   width: 100%;
   height: 290px;
@@ -486,18 +571,10 @@
 .my-account {
   padding-right: 48px;
 }
-.second-block {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
-  margin-top: 48px;
-}
+
 .footer-elements {
   width: 141px;
-  height: hug(135px);
+
   color: white;
   padding-top: 9px;
   font-family: Work Sans;
@@ -518,8 +595,16 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-right: 1.38%;
-  padding-left: 68.1%;
+  padding-right: 786px;
+  padding-left: 0.1%;
+}
+.footer-logo {
+  width: 255px;
+  height: 40px;
+  top: 115px;
+  left: 1133px;
+  gap: 0px;
+  opacity: 0px;
 }
 .social {
   display: flex;
